@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:background="#51bebebe"/>
+<RadioGroup
+    android:id="@+id/rg"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:background="#fafafa">
+    <RadioButton
+        android:id="@+id/sound"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/bottom_sound"
+        android:drawableTop="@drawable/selector_picture_sound"
+        android:gravity="center"
+        android:textColor="@drawable/selector_tv_fen"
+        android:textSize="14sp"
+        android:button="@null"
+        android:checked="true"/>
+    <RadioButton
+        android:id="@+id/sleepHelp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/bottom_sleepHelp"
+        android:drawableTop="@drawable/selector_picture_bed"
+        android:gravity="center"
+        android:textColor="@drawable/selector_tv_fen"
+        android:button="@null"/>
+    <RadioButton
+        android:id="@+id/routine"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/bottom_time"
+        android:drawableTop="@drawable/selector_picture_ring"
+        android:gravity="center"
+        android:textColor="@drawable/selector_tv_fen"
+        android:button="@null"/>
+    <RadioButton
+        android:id="@+id/report"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/bottom_report"
+        android:drawableTop="@drawable/selector_picture_report"
+        android:gravity="center"
+        android:textColor="@drawable/selector_tv_fen"
+        android:button="@null"/>
+</RadioGroup>
+</LinearLayout>

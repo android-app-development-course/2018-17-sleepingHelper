@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">sleepHelper</string>
+    <string name="bottom_sound">sound</string>
+    <string name="bottom_sleepHelp">sleep help</string>
+    <string name="bottom_time">routines</string>
+    <string name="bottom_report">report</string>
+</resources>
