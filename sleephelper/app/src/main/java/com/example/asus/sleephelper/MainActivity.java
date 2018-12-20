@@ -1,27 +1,35 @@
 package com.example.asus.sleephelper;
 
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.RadioGroup;
 
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity {
 
     private ViewPager viewPager;
     private RadioGroup radioGroup;
     private List<Fragment> fragmentList=new ArrayList<>();
+    private NavigationView navigationView ;
+    public MainActivity() {
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         viewPager=(ViewPager)findViewById(R.id.vp);
         radioGroup=(RadioGroup)findViewById(R.id.rg);
+        navigationView = (NavigationView) findViewById(R.id.navigation_view);
 
         soundFragment sFragment=new soundFragment();
         SleepHelpFragment sleepHelpFragment=new SleepHelpFragment();
@@ -94,7 +102,17 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+                //在这里处理item的点击事件
+                return true;
+            }
+        });
+
     }
+
+
 }
 
 
