@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.asus.sleephelper">
-
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -18,12 +18,17 @@
             </intent-filter>
         </activity>
         <activity android:name=".Fragment.routineactivity" />
+        <activity android:name=".activity.webActivity" />
         <activity android:name=".beforesleepactivity" />
         <activity android:name=".daojishioneactivity" />
         <activity android:name=".daojishitwoactivity" />
         <activity android:name=".daojishithreeactivity" />
         <activity android:name=".routinetwoactivity" />
         <activity android:name=".clockactivity" />
+        <activity android:name=".discoveractivity" />
+        <activity android:name=".aboutusactivity" />
+        <activity android:name=".helpactivity" />
+        <activity android:name=".evaluateactivity" />
         <activity android:name=".recordsleep"></activity>
         <receiver
             android:name=".OneShotAlarm"

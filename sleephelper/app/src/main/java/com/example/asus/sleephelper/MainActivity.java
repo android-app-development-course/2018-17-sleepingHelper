@@ -1,13 +1,12 @@
 package com.example.asus.sleephelper;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
-import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.RadioGroup;
 
 import java.util.ArrayList;
@@ -102,15 +101,40 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        setNavItemListener();
+    }
+    public void setNavItemListener()
+    {
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
                 //在这里处理item的点击事件
+               // item.setChecked(true);
+                //item.getItemId()
+               switch (item.getItemId())
+               {
+                   case R.id.discover:
+                       Intent intent=new Intent(MainActivity.this,discoveractivity.class);
+                       startActivity(intent);
+                       break;
+                   case R.id.about_us:
+                       Intent intent1=new Intent(MainActivity.this,aboutusactivity.class);
+                       startActivity(intent1);
+                       break;
+                   case R.id.help:
+                       Intent intent2=new Intent(MainActivity.this,helpactivity.class);
+                       startActivity(intent2);
+                       break;
+                   case R.id.evaluate:
+                       Intent intent3=new Intent(MainActivity.this,evaluateactivity.class);
+                       startActivity(intent3);
+                       break;
+               }
                 return true;
             }
         });
-
     }
+
 
 
 }
