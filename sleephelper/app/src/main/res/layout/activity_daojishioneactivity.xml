@@ -7,28 +7,52 @@
     android:orientation="vertical"
     tools:context=".daojishioneactivity"
     android:background="@drawable/daojishibackground">
-    <TextView
-        android:id="@+id/d_text1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:layout_gravity="center"/>
-    <Button
-        android:id="@+id/btnCountTimer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="200dp"
-        android:background="@null"
-        android:text="倒计时"
-        android:textColor="@android:color/holo_red_dark"
-        android:textSize="80sp" />
-    <Button
-        android:id="@+id/bt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:text="下一项"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnCountTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="72dp"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="111dp"
+            android:background="@null"
+            android:text="倒计时"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="80sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/d_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="191dp"
+            android:layout_marginStart="192dp"
+            android:layout_marginTop="270dp"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="148dp"
+            android:layout_marginStart="147dp"
+            android:layout_marginTop="54dp"
+            android:text="下一项"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/d_text1" />
+    </android.support.constraint.ConstraintLayout>
 
 </LinearLayout>
