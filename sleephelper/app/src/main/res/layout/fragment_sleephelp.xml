@@ -1,144 +1,276 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="推荐歌曲"
+            android:textSize="25sp"
+            android:textColor="#000000"
+            android:gravity="center_horizontal" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/back2"/>
+
     <ScrollView
         android:id="@+id/sv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="8dip"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:paddingLeft="10dip"
+        android:paddingTop="200dip"
         android:scrollbarStyle="insideOverlay">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <Button
                     android:id="@+id/on1"
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:background="@null"/>
+                    android:layout_height="60dp"
+                    android:background="@null" />
+
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"/>
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/pone" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="100dp"
+                    android:paddingLeft="70dp"
                     android:text="Born a Stranger"
-                    android:textSize="25sp"/>
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="100dp"
-                    android:paddingTop="60dp"
+                    android:paddingLeft="70dp"
+                    android:paddingTop="30dp"
                     android:text="Kan R. Gao"
-                    android:textSize="17sp"/>
+                    android:textSize="15sp" />
             </FrameLayout>
+
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="100dp">
+                android:layout_marginTop="70dp">
+
                 <Button
                     android:id="@+id/on2"
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:background="@null"/>
+                    android:layout_height="60dp"
+                    android:background="@null" />
+
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"/>
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/ptwo" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="100dp"
+                    android:paddingLeft="70dp"
                     android:text="木陰"
-                    android:textSize="25sp"/>
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="100dp"
-                    android:paddingTop="60dp"
+                    android:paddingLeft="70dp"
+                    android:paddingTop="30dp"
                     android:text="いろのみ"
-                    android:textSize="17sp"/>
+                    android:textSize="15sp" />
             </FrameLayout>
+
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="200dp">
+                android:layout_marginTop="140dp">
+
                 <Button
                     android:id="@+id/on3"
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:background="@null"/>
+                    android:layout_height="60dp"
+                    android:background="@null" />
+
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"/>
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/pthree" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="100dp"
+                    android:paddingLeft="70dp"
                     android:text="Dazing"
-                    android:textSize="25sp"/>
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="100dp"
-                    android:paddingTop="60dp"
+                    android:paddingLeft="70dp"
+                    android:paddingTop="30dp"
                     android:text="音乐治疗"
-                    android:textSize="17sp"/>
+                    android:textSize="15sp" />
             </FrameLayout>
+
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="300dp">
+                android:layout_marginTop="210dp">
+
                 <Button
                     android:id="@+id/on4"
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:background="@null"/>
+                    android:layout_height="60dp"
+                    android:background="@null" />
+
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"/>
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/pthree" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="100dp"
+                    android:paddingLeft="70dp"
                     android:text="Drip Drip Drip"
-                    android:textSize="25sp"/>
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="100dp"
-                    android:paddingTop="60dp"
+                    android:paddingLeft="70dp"
+                    android:paddingTop="30dp"
                     android:text="音乐治疗"
-                    android:textSize="17sp"/>
+                    android:textSize="15sp" />
             </FrameLayout>
+
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="400dp">
+                android:layout_marginTop="280dp">
+
                 <Button
                     android:id="@+id/on5"
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:background="@null"/>
+                    android:layout_height="60dp"
+                    android:background="@null" />
+
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"/>
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/pthree" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="100dp"
+                    android:paddingLeft="70dp"
                     android:text="Floating in the City"
-                    android:textSize="25sp"/>
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="100dp"
-                    android:paddingTop="60dp"
+                    android:paddingLeft="70dp"
+                    android:paddingTop="30dp"
                     android:text="音乐治疗"
-                    android:textSize="17sp"/>
+                    android:textSize="15sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="350dp">
+
+                <Button
+                    android:id="@+id/on6"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@null" />
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/pfour" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="70dp"
+                    android:text="dear sleeper"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="70dp"
+                    android:paddingTop="30dp"
+                    android:text="Chima"
+                    android:textSize="15sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="420dp">
+
+                <Button
+                    android:id="@+id/on7"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@null" />
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/pfive" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="70dp"
+                    android:text="微睡む月の夜のアリア 竖琴ver"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="70dp"
+                    android:paddingTop="30dp"
+                    android:text="Meandi鸦缺"
+                    android:textSize="15sp" />
             </FrameLayout>
         </RelativeLayout>
     </ScrollView>
