@@ -19,6 +19,7 @@
         </activity>
         <activity android:name=".Fragment.routineactivity" />
         <activity android:name=".activity.webActivity" />
+        <activity android:name=".MusicShowActivity" />
         <activity android:name=".beforesleepactivity" />
         <activity android:name=".daojishioneactivity" />
         <activity android:name=".daojishitwoactivity" />
