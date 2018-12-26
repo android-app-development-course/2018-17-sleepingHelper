@@ -9,8 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
-import com.example.asus.sleephelper.activity.webActivity;
-
 public class soundFragment extends Fragment{
     private ImageButton imageButton1_1;
     private ImageButton imageButton1_2;

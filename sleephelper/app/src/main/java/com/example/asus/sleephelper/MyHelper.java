@@ -7,13 +7,15 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class MyHelper extends SQLiteOpenHelper {
     public MyHelper(Context context)
     {
-        super(context,"itcast db",null,1);
+        super(context,"itcast.db",null,1);
     }
-    public void onCreate(SQLiteDatabase db)
-    {
-        db.execSQL("CREATE TABLE information(_id INTEGER PRIMARY KEY AUTOINCREMENT,betweentime INTEGER,sign INTEGER,year INTEGER,month INTEGER," +
-                "date INTEGER,hour INTEGER,minute INTEGER)");
+    @Override
+    public void onCreate(SQLiteDatabase db) {
+        db.execSQL("CREATE  TABLE IF NOT EXISTS information(_id INTEGER PRIMARY KEY AUTOINCREMENT,betweentime INTEGER,year INTEGER,month INTEGER,date INTEGER,hour INTEGER,minute INTEGER)");
+        db.execSQL("CREATE TABLE IF NOT EXISTS numberpassword(_id INTEGER PRIMARY KEY AUTOINCREMENT,number VARCHAR(20),password VARCHAR(20))");
     }
-    public void onUpgrade(SQLiteDatabase db,int oldVersion,int newVersion)
-    {}
+    @Override
+    public void onUpgrade(SQLiteDatabase db,int oldVersion,int newVersion){
+
+    }
 }
