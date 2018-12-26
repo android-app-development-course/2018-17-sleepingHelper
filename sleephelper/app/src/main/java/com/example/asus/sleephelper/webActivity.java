@@ -1,12 +1,10 @@
-package com.example.asus.sleephelper.activity;
+package com.example.asus.sleephelper;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-
-import com.example.asus.sleephelper.R;
 
 public class webActivity extends AppCompatActivity{
     private WebView webView;
