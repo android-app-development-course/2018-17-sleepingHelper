@@ -1,6 +1,5 @@
 package com.example.asus.sleephelper;
 
-import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v4.app.Fragment;
@@ -40,7 +39,9 @@ public class reportFragment extends Fragment {
                 String betweentime=cursor.getString(cursor.getColumnIndex("betweentime"))+"min";
                 String time=cursor.getString(cursor.getColumnIndex("year"))+"年"+
                         cursor.getString(cursor.getColumnIndex("month"))+"月"+
-                        cursor.getString(cursor.getColumnIndex("date"))+"日";
+                        cursor.getString(cursor.getColumnIndex("date"))+"日"+
+                        cursor.getString(cursor.getColumnIndex("hour"))+"时"+
+                        cursor.getString(cursor.getColumnIndex("minute"))+"分";
                 map.put("Title",betweentime);
                 map.put("SubText",time);
                 mylist.add(map);

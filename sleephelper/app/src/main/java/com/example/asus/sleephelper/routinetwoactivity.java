@@ -12,6 +12,7 @@ import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -42,6 +43,18 @@ public class routinetwoactivity extends AppCompatActivity {
                         hour=hourOfDay;
                         min=minute;
                         Calendar c=Calendar.getInstance();
+                        c.setTimeInMillis(System.currentTimeMillis());
+                        if(c.get(Calendar.HOUR_OF_DAY)>hourOfDay)
+                        {
+                            c.add(Calendar.DATE,1);
+                        }
+                        else if(c.get(Calendar.HOUR_OF_DAY)==hourOfDay)
+                        {
+                            if(c.get(Calendar.MINUTE)>=minute)
+                            {
+                                c.add(Calendar.DATE,1);
+                            }
+                        }
                         c.set(Calendar.HOUR_OF_DAY,hourOfDay);
                         c.set(Calendar.MINUTE,minute);
                         Intent intent = new Intent(routinetwoactivity.this, OneShotAlarm.class);
@@ -49,6 +62,7 @@ public class routinetwoactivity extends AppCompatActivity {
                                 routinetwoactivity.this, 0x101, intent, 0);
                         AlarmManager am = (AlarmManager) getSystemService(ALARM_SERVICE);
                         am.setRepeating(AlarmManager.RTC_WAKEUP, c.getTimeInMillis(),INTERVAL, sender);
+                        Toast.makeText(routinetwoactivity.this, "闹钟设置成功", Toast.LENGTH_SHORT).show();
                     }
                     //0,0指的是时间，true表示是否为24小时，true为24小时制
                 },0,0,true).show();
@@ -58,10 +72,22 @@ public class routinetwoactivity extends AppCompatActivity {
         sw1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked)
+                if (sw1.isChecked())
                 {
                     //设置SP
                     Calendar c=Calendar.getInstance();
+                    c.setTimeInMillis(System.currentTimeMillis());
+                    if(c.get(Calendar.HOUR_OF_DAY)>hour)
+                    {
+                        c.add(Calendar.DATE,1);
+                    }
+                    else if(c.get(Calendar.HOUR_OF_DAY)==hour)
+                    {
+                        if(c.get(Calendar.MINUTE)>=min)
+                        {
+                            c.add(Calendar.DATE,1);
+                        }
+                    }
                     c.set(Calendar.HOUR_OF_DAY,hour);
                     c.set(Calendar.MINUTE,min);
                     c.add(Calendar.MINUTE,-45);
@@ -70,6 +96,7 @@ public class routinetwoactivity extends AppCompatActivity {
                             routinetwoactivity.this, 0001, intent, 0);
                     AlarmManager am = (AlarmManager) getSystemService(ALARM_SERVICE);
                     am.setRepeating(AlarmManager.RTC_WAKEUP, c.getTimeInMillis(),INTERVAL, sender);
+                    Toast.makeText(routinetwoactivity.this, "睡前准备提醒开启成功", Toast.LENGTH_SHORT).show();
                 }else{
                     //设置SP
                     Intent intent = new Intent(routinetwoactivity.this, OneShotAlarm.class);
@@ -77,16 +104,29 @@ public class routinetwoactivity extends AppCompatActivity {
                             routinetwoactivity.this, 0001, intent, 0);
                     AlarmManager am = (AlarmManager) getSystemService(ALARM_SERVICE);
                     am.cancel(sender);
+                    Toast.makeText(routinetwoactivity.this, "睡前准备提醒取消成功", Toast.LENGTH_SHORT).show();
                 }
             }
         });
         sw2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked)
+                if (sw2.isChecked())
                 {
                     //设置SP
                     Calendar c=Calendar.getInstance();
+                    c.setTimeInMillis(System.currentTimeMillis());
+                    if(c.get(Calendar.HOUR_OF_DAY)>hour)
+                    {
+                        c.add(Calendar.DATE,1);
+                    }
+                    else if(c.get(Calendar.HOUR_OF_DAY)==hour)
+                    {
+                        if(c.get(Calendar.MINUTE)>=min)
+                        {
+                            c.add(Calendar.DATE,1);
+                        }
+                    }
                     c.set(Calendar.HOUR_OF_DAY,hour);
                     c.set(Calendar.MINUTE,min);
                     Intent intent = new Intent(routinetwoactivity.this, OneShotAlarm.class);
@@ -94,6 +134,7 @@ public class routinetwoactivity extends AppCompatActivity {
                             routinetwoactivity.this, 0x101, intent, 0);
                     AlarmManager am = (AlarmManager) getSystemService(ALARM_SERVICE);
                     am.setRepeating(AlarmManager.RTC_WAKEUP, c.getTimeInMillis(),1000*60*10, sender);
+                    Toast.makeText(routinetwoactivity.this, "严格模式开启成功", Toast.LENGTH_SHORT).show();
                 }else{
                     //设置SP
                     Intent intent = new Intent(routinetwoactivity.this, OneShotAlarm.class);
@@ -102,9 +143,22 @@ public class routinetwoactivity extends AppCompatActivity {
                     AlarmManager am = (AlarmManager) getSystemService(ALARM_SERVICE);
                     am.cancel(sender);
                     Calendar c=Calendar.getInstance();
+                    c.setTimeInMillis(System.currentTimeMillis());
+                    if(c.get(Calendar.HOUR_OF_DAY)>hour)
+                    {
+                        c.add(Calendar.DATE,1);
+                    }
+                    else if(c.get(Calendar.HOUR_OF_DAY)==hour)
+                    {
+                        if(c.get(Calendar.MINUTE)>=min)
+                        {
+                            c.add(Calendar.DATE,1);
+                        }
+                    }
                     c.set(Calendar.HOUR_OF_DAY,hour);
                     c.set(Calendar.MINUTE,min);
                     am.setRepeating(AlarmManager.RTC_WAKEUP, c.getTimeInMillis(),INTERVAL, sender);
+                    Toast.makeText(routinetwoactivity.this, "严格模式取消成功", Toast.LENGTH_SHORT).show();
                 }
             }
         });

@@ -23,24 +23,15 @@ public class recordsleep extends AppCompatActivity {
     private int month2;
     private int year2;
     private long betweentime;
-    private Button startrecord;
     private Button endrecord;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recordsleep);
         myHelper=new MyHelper(this);
-        startrecord=(Button)findViewById(R.id.startrecord);
+
+        startRecord();
         endrecord=(Button)findViewById(R.id.endrecord);
-        endrecord.setEnabled(false);
-
-        startrecord.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               startRecord();
-            }
-        });
-
         endrecord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,12 +43,10 @@ public class recordsleep extends AppCompatActivity {
     public void startRecord(){
         Calendar c=Calendar.getInstance();
         day1=c.get(Calendar.DAY_OF_MONTH);
-        hour1=c.get(Calendar.HOUR);
+        hour1=c.get(Calendar.HOUR_OF_DAY)+1;
         minute1=c.get(Calendar.MINUTE);
         month1=c.get(Calendar.MONTH)+1;
         year1=c.get(Calendar.YEAR);
-        startrecord.setEnabled(false);
-        endrecord.setEnabled(true);
     }
 
     public void endRecord() {
@@ -65,7 +54,7 @@ public class recordsleep extends AppCompatActivity {
         ContentValues values;
         Calendar c=Calendar.getInstance();
         day2=c.get(Calendar.DAY_OF_MONTH);
-        hour2=c.get(Calendar.HOUR);
+        hour2=c.get(Calendar.HOUR_OF_DAY)+1;
         minute2=c.get(Calendar.MINUTE);
         month2=c.get(Calendar.MONTH)+1;
         year2=c.get(Calendar.YEAR);

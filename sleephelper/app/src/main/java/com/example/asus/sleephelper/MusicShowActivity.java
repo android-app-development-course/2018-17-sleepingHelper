@@ -25,10 +25,10 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class MusicShowActivity extends AppCompatActivity implements OnSeekBarChangeListener {
-    String[] songName={"Born a Stranger","木陰","Dazing","Drip Drip Drip","Floating in the City","dear sleeper","微睡む月の夜のアリア 竖琴ver"};
-    String[] singer={"Kan R. Gao","いろのみ","音乐治疗","音乐治疗","音乐治疗","Chima","Meandi鸦缺"};
-    int [] icons={R.drawable.pone,R.drawable.ptwo,R.drawable.pthree,R.drawable.pthree,R.drawable.pthree,R.drawable.pfour,R.drawable.pfive};
-    int [] song={R.raw.music1,R.raw.music2,R.raw.music3,R.raw.music4,R.raw.music5,R.raw.music6,R.raw.music7};
+    String[] songName={"Born a Stranger","木陰","Dazing","Drip Drip Drip","Floating in the City","dear sleeper","微睡む月の夜のアリア 竖琴ver","夜空的寂静"};
+    String[] singer={"Kan R. Gao","いろのみ","音乐治疗","音乐治疗","音乐治疗","Chima","Meandi鸦缺","赵海洋"};
+    int [] icons={R.drawable.pone,R.drawable.ptwo,R.drawable.pthree,R.drawable.pthree,R.drawable.pthree,R.drawable.pfour,R.drawable.pfive,R.drawable.psix};
+    int [] song={R.raw.music1,R.raw.music2,R.raw.music3,R.raw.music4,R.raw.music5,R.raw.music6,R.raw.music7,R.raw.music8};
     private TextView title,author,tvCurrentTime,tvTotalTime;
     private ImageView songpicture;
     private Button last,onoff,next;

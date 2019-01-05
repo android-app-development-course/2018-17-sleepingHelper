@@ -98,6 +98,13 @@
                             app:layout_constraintStart_toEndOf="@+id/textView13"
                             app:layout_constraintTop_toTopOf="parent" />
 
+                        <Switch
+                            android:id="@+id/close1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintEnd_toStartOf="@+id/setone"
+                            app:layout_constraintTop_toTopOf="parent" />
+
                         <TextView
                             android:id="@+id/setone"
                             android:layout_width="wrap_content"
@@ -151,6 +158,13 @@
                             app:layout_constraintStart_toEndOf="@+id/textView14"
                             app:layout_constraintTop_toTopOf="parent" />
 
+                        <Switch
+                            android:id="@+id/close2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintEnd_toStartOf="@+id/settwo"
+                            app:layout_constraintTop_toTopOf="parent" />
+
                         <TextView
                             android:id="@+id/settwo"
                             android:layout_width="wrap_content"
@@ -201,6 +215,13 @@
                             android:textSize="20sp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/textView15"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <Switch
+                            android:id="@+id/close3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintEnd_toStartOf="@+id/setthree"
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView

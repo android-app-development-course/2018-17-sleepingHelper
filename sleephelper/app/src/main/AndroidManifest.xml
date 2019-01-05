@@ -32,14 +32,7 @@
         <activity android:name=".aboutusactivity" />
         <activity android:name=".helpactivity" />
         <activity android:name=".evaluateactivity" />
-        <activity android:name=".recordsleep"></activity>
-        <receiver
-            android:name=".OneShotAlarm"
-            android:process=":remote" />
-        <receiver
-            android:name=".RepeatingAlarm"
-            android:process=":remote" />
-
+        <activity android:name=".recordsleep"/>
+        <activity android:name=".MoreActivity"/>
     </application>
-
 </manifest>
